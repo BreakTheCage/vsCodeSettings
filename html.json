@@ -1,0 +1,25 @@
+{
+	// Place your snippets for html here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	"Angular Router": {
+		"prefix": "sxngroute",
+		"body": [
+			"<!--routing by link with active css class: more inside header-->",
+			"<ul class='nav nav-tabs'>",
+			"\t<li role='presentation' routerLinkActive='active' [routerLinkActiveOptions]='{exact: true}'><a routerLink='/'>Home</a></li>",
+			"\t<li role='presentation' routerLinkActive='active'><a [routerLink]='['users']'>Users</a></li>",
+			"</ul>",
+			"<!-- make a link router with quary param -->",
+			"<a",
+				"\t[routerLink] = '['/servers', 5,'edit']''",
+				"\t[queryParams]='{allowEdit:'1'}'",
+				"\tfragment='loading'>",
+				"\tlink label",
+			"</a>"
+		],
+		"description": "* angular router"
+	}
+}

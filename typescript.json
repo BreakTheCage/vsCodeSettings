@@ -1,0 +1,35 @@
+{
+	// Place your snippets for typescript here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	"Router in Angular": {
+		"prefix": "sxngroute",
+		"body": [
+			"//routing by navigation method: more inside method",
+			"this.router.navigate(['servers', id, 'edit'], {relativeTo: this.activatedRoute, queryParams: {'allowEdit': '1'}, fragment: 'loading'})",
+			"//get active route parameters, query parameters, fragment",
+			"this.activatedRoute.snapshot.params['id']",
+			"this.activatedRoute.snapshot.queryParams",
+			"this.activatedRoute.snapshot.fragment",
+			"//get active route parameters with observeble subscription",
+			"import { Subscription } from 'rxjs/Subscription';",
+			"paramSubscription: Subscription;",
+			"this.paramSubscription = this.activatedRoute.params.subscribe((params: Params ) =>{",
+			"\tthis.user.id = params.id;",
+			"\tthis.user.name = params.name;",
+			 "})",
+			"//get active route Query parameters with observeble subscription",
+			"import { Subscription } from 'rxjs/Subscription';",
+			"queryParamSubscription: Subscription;",
+			"this.queryParamSubscription = this.activatedRoute.queryParams.subscribe((params: Params ) =>{",
+			"\tthis.user.id = params.id;",
+			"\tthis.user.name = params.name;",
+			 "})",
+			 "ngOnDestroy(): void {this.paramSubscription.unsubscribe();}",
+			"$0"
+		],
+		"description": "* Router in Angular"
+	}
+}
