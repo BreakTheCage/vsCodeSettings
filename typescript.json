@@ -8,7 +8,7 @@
 		"prefix": "sxngroute",
 		"body": [
 			"//routing by navigation method: more inside method",
-			"this.router.navigate(['servers', id, 'edit'], {relativeTo: this.activatedRoute, queryParams: {'allowEdit': '1'}, fragment: 'loading'})",
+			"this.router.navigate(['servers', id, 'edit'], {relativeTo: this.activatedRoute, queryParams: {'allowEdit': '1'}, fragment: 'loading', queryParamsHandling: 'preserve|merge'})",
 			"//get active route parameters, query parameters, fragment",
 			"this.activatedRoute.snapshot.params['id']",
 			"this.activatedRoute.snapshot.queryParams",
